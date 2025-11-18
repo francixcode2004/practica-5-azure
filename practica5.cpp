@@ -64,12 +64,10 @@ void run_search(int num_threads, const char* schedule_type, int chunk_size) {
 int main() {
     cout << "--- Búsqueda de Patron en ADN (" << PATTERN << ") ---" << endl;
     run_search(1, "static", N); 
-
     run_search(2, "guided", N/2); 
-
     run_search(2, "dynamic", 1); 
-
-    run_search(2, "auto", 1); 
+    run_search(2, "static", N/2); 
+    run_search(2, "auto", 1);
 
     return 0;
 }
